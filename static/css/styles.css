@@ -1,0 +1,29 @@
+body{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.block {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+#selectBtn{
+    display: block;
+    top: 150px;
+    font-family: tahoma, Arial, sans-serif;
+    width: auto;
+    padding: 10px;
+    border: 1px dashed #BBB;
+    text-align: center;
+    background-color: #DDD;
+    cursor:pointer;
+}

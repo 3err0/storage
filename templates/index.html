@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Storage</title>
+        <link rel="stylesheet" href="static/css/styles.css" />
+        <link rel="icon" href="/static/images/favicon.png">
+    </head>
+    <script type="text/javascript">
+        function getFile(){
+            document.getElementById("upfile").click();
+        }
+        function sub(obj){
+            var file = obj.value;
+            var fileName = file.split("\\");
+            document.getElementById("selectBtn").innerHTML = fileName[fileName.length-1];
+            document.myForm.submit();
+            event.preventDefault();
+        }
+    </script>
+    <body>
+    <form action="" method=post enctype=multipart/form-data name=myForm>
+        <div class="block">
+            <div id="selectBtn" onclick="getFile()">Select file</div>
+            <div style='height: 0px; width: 0px;overflow:hidden;'>
+                <input id="upfile" type="file" name="file" value="upload" onchange="sub(this)"/>
+            </div>
+        </div>
+    </form>
+    </body>
+</html>
